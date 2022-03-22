@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //随机数 random()返回一个随机小数
+        //方法里不跟参数
+        //代码验证
+        console.log(Math.random());
+        //得到两个数之间的随机整数
+        // Math.floor(Math.random()*(max=min+1))+min;
+        function getRandom(min,max){
+            return Math.floor(Math.random()*(max-min+1))+min;
+        }
+        console.log(getRandom(1,10));
+        // 5.随机点名
+        var arr =['小白','小明','小李'];
+        // console.log(arr[]);
+        console.log(arr[getRandom(0,arr.length-1)]);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

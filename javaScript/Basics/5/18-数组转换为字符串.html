@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+    //    1.toString()
+    var arr=[1,2,3];
+    console.log(arr.toString());//1,2,3
+    //2.join(分隔符)
+    var arr1=['green','two','3'];
+    console.log(arr1.join('-'));//用-分割
+    console.log(arr1.join('&'));//用&分割
+
+    var arr2=['a','b','c'];
+    var arr3=['a','b','c'];
+    console.log(arr2.concat(arr3));//返回一个新的数组
+    console.log(arr2.slice(0,3));//slice(begin,end)返回被截取的新数组
+    console.log(arr2);
+    console.log(arr2.splice(0,2));//splice(从几个开始，要删除几个)
+    console.log(arr2);//返回删除项目新数组 影响原数组 如运行所示
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
