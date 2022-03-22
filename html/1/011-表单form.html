@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>表单</title>
+	</head>
+	<body>
+		<!-- 1.表单作用
+				收集用户信息
+				表单展现之后，用户填写表单，点击提交按钮提交数据
+				给服务器
+			 2.怎么画一个表单
+				form标签画表单
+			 3.一个网页当中可以有多个表单form
+			 4.表单最终是需要提交数据给服务器的服务器的
+			 form标签有一个action属性，这个属性用来指定
+			 服务器地址
+				action属性用来指定数据提交给那个服务器
+				action属性和超链接中的href属性一样,都可以向
+				服务器发送请求(request)
+			 5.http://192.168.111.3:8080/oa/save这是请求路径
+			 表单提交数据最终提交给
+								192.168.111.3机器上8080端口对应的软件
+		 --> 
+		 <form action="http://192.168.111.3:8080/oa/save" >
+			 <!-- 画一个提交按钮 可以提交表单 -->
+			 <!-- 画按钮 可以使用input输入域  type=submit的时候表示按钮是一个
+			 提交按钮，具有提交表单的能力
+			 -->
+			 <!-- 对于按钮来说，按钮的value用来指定按钮上显示的文本信息 -->
+			 <input type="submit"  value="注册"/>
+			 <input type="button"  value="按钮上显示的文本"/>
+			 <!-- 这是一个普通按钮不具备提交表单的能力 -->
+		 </form>
+		 
+		 
+		 <!-- 这个按钮和普通超链接没有太大区别
+			超链接和表单都可以向服务器发送请求，只不过表
+				单可以携带数据
+		  -->
+		 <form action="http://www.baidu.com">
+			 <input type="text"/>
+			 <input type="submit" value="百度">
+		 </form>
+		 <br>
+		 <br>
+		 <br>
+		 <br>
+		 <!-- 表单是以什么格式提交数据给服务器的 
+			http://localhost:8080/jd/login?username=admin&userpwd=123
+			格式：action?name=value&name=value&name=value&name=value
+			w3c的HTTP协议规定，必须以这种格式提交给服务器
+			
+			
+			
+			重点强调：表单写了name属性一定会提交给服务器，
+					不想写提交这一项，就不要写name属性
+					
+			文本框和密码框的value不需要程序员指定，用户输入什么value就是什么
+					当name没有写的时候，该项不会提交给服务器，
+					但是value没有写的时候，value的默认值是空字符串""，会将
+					空字符串提交给服务器 java代码得到的是String username="";
+		 -->
+		 <form action="http://localhost:8080/jd/login">
+			 用户名<input type="text" /><br>
+			 密码<input type="password" /><br>
+			 <input type="submit" value="登录" /> 
+		 </form>
+		 <br>
+		 <br>
+		 <br>
+		 <br>
+		 <form action="http://localhost:8080/jd/login">
+		 <table border="0px">
+			 <tr>
+				 <td>用户名</td>
+				 <td><input type="text" name="username" value="jack"/></td>
+			 </tr>
+			 <tr>
+				 <td>密码</td>
+				 <td><input type="password"  name="userpwd"/></td>
+			 </tr>
+			 <tr align="center">
+				 <td colspan="2">
+					<input type="submit" value="登录" /> 
+					 &nbsp;
+					 &nbsp;
+					 &nbsp;
+					 <input type="reset" value="清空" />
+				 </td>
+			 </tr>
+		 </table>
+		 </form>
+		 
+		 <input type="reset" value="清空" />
+		 <!--  必须放到form标签内部-->
+		 
+		 <input type="submit" value="登录" />
+		 <!-- submit必须放到form标签内部 -->
+	</body>
+</html>

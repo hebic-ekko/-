@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    input[type="search"]::-webkit-search-cancel-button{
+        -webkit-appearance:none;
+        height:15px;
+        width:15px;
+        background-color: red;
+
+        /* input[type=number]::-webkit-inner-spin-button, 
+        input[type=number]::-webkit-outer-spin-button{
+            -webkit-appearance: none;
+            margin:0;
+        }*/
+
+    }
+</style>
+<body>
+       <form action="" method="post" enctype="multipart/form-data"  autocomplete="on">
+
+           <input type="file">
+
+           <label for="">用户名</label>
+           <input type="text" name="user" placeholder="请输入用户名" required id="" autofocus="autofoucs">
+           
+           <label for="">工号</label>
+           <input type="text" name="gonghao" placeholder="请输入工号" pattern="^\d{5}[imooc]$">
+
+           <input type="search" id="search" value="">
+
+           <input type="number"  value="0.02" id="numbers" step="0.01" |oninput="checkLength(this,5)">
+
+           <input type="submit" name="" id="">
+
+           <input type="text" list="tips" id="">
+           <datalist id="tips">
+               <option value="erwerewr"></option>
+               <option value="erwerewr0"></option>
+               <option value="erwerewr1"></option>
+               <option value="erwerewr2"></option>
+           </datalist>
+
+           <label for="man">男</label>
+           <input type="radio" name="sex" id="man" required>
+           <label for="woman">女</label>
+           <input type="radio" name="sex" id="woman" required>
+
+
+           <!-- <input type="submit" name="" formnovalidate=""> -->
+
+           <input type="submit">
+           
+
+       </form>
+       <form action="">
+           <input type="text" name="" id="username" required="">
+
+           <input type="submit" name="" id="">
+
+           <input type="text"  id="email">
+
+           <input type="submit">
+       </form>
+
+       <script>
+           console.log(username.validity)
+
+           console.log(email.validity)
+
+           console.log(numbers.validity)
+
+           function checkLength(obj,length){
+               if(obj.value>length){
+                   obj.value=obj.value.substr(0,length);
+               }
+           }
+       </script>
+</body>
+</html>
