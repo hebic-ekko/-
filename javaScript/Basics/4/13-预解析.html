@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //1
+        // console.log(num);
+        //2
+        console.log(num);
+        var num=10;
+        // 1.var num;
+        //console.log(num);
+        // num=10
+        //3
+        fn();
+        function fn(){
+            console.log(11);
+        }
+        //4
+        fun();
+        var fun=function(){
+            console.log(22);
+        }
+        // var fun;
+        // fun();
+        // fun=function()
+        // console.log(22);
+
+        //var a=b=c=9;//var a=9;b=9;c=9; bc 直接赋值 全局变量
+        // 集体声明var a=9.b=9.c=9;
+
+
+        //1.js引擎运行js 预解析 代码执行
+        //2.把var function 提升到当前作用域最前面
+        //3.代码执行 按照书写顺序从上往下
+        //4，变量预解析 提升 函数提升
+        //5.变量提升 变量声明提升当前作用域最前面 不提升操作
+        //6.函数提升 把所有的函数声明提升到当前作用域的最前面 不调用函数
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

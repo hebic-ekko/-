@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function getSum(num1,num2){
+            return num1+num2;//return后面的代码不会被执行
+            alert('不会被执行')
+        }
+        console.log(getSum(1,2));
+        //return智能返回一个值
+        function getSums(num1,num2){
+            return num1,num2;//return后面的代码不会被执行
+            alert('不会被执行')
+        }
+        console.log(getSums(1,2));
+
+        // 3.求任意数加减乘除结果
+        function getResult(num1,num2){
+            return[num1+num2,num1-num2,num1*num2];
+        }
+        var re=getResult(1,2);
+        console.log(re);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

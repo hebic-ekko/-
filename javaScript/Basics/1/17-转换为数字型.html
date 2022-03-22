@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var age=prompt('输入你的年龄');
+        //1.parseInt可以把字符型转换为数字型 整数
+        console.log(parseInt(age));
+        console.log(parseInt(3.14));//取整3
+        console.log(parseInt(3.94));//取整3
+        console.log(parseInt('10px'));//10会去掉px单位 其他字母也可以
+        console.log(parseInt('rea10px'));//NaN
+        //2.parseFliat(变量) 字符型转换为数字型 得到小数 浮点数
+        console.log(parseFloat(3.14));//3.14
+        console.log(parseFloat('rea10px'));//NaN
+        console.log(parseFloat('10px'));//10 去掉px
+        //3.Number(变量)
+        var str='123';
+        console.log(Number(str));
+        console.log(Number(12));
+        //4.算数运算 - * /隐士转换
+        console.log('12'-0);//12
+        console.log('123'-'120');//12
+        console.log('123'-1);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

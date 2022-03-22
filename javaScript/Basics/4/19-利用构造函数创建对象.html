@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //创建四大天王对象 属性 名字 年龄 性别
+        //构造函数语法格式
+        /* function 构造函数名(){
+            this.属性=值;
+            this.方法=function(){}
+        }
+        new 构造函数名();  泛指某一大类*/
+        function Star(uname,age,sex){
+            this.uname=uname;
+            this.age=age;
+            this.sex=sex;
+            this.sing=function(sang){
+                console.log(sang);
+            }
+
+        }
+        //对象 特指某一个
+        var ldh =new Star('刘德华','18','男');//调用函数返回的是一个对象
+
+        console.log(typeof ldh);//Object
+        //1.构造函数名字首字母大写
+        console.log(ldh.name);
+        console.log(ldh['age']);
+        ldh.sing('冰雨');
+        var ln=new Star('梁楠','23','男');
+        console.log(ln.uname);
+        console.log(ln['age']);
+        //2.构造函数不需要return就可以返回结果
+        //3.我们调用构造函数必须使用new
+        //4.只要newStar()调用函数就创建了一个对象ldh
+        //5.属性和方法前面必须加this
+
+        //利用构造函数穿件对象的过程称为对象的实例化
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

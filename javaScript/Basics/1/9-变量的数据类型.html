@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //int num=10; java
+        // var num;这里num不确定属于哪种类型
+        var num=10;
+        //js变量数据类型 只有在程序在运行过程中，根据等号右边的值来确定
+        var str='pink';//str 字符串
+        //js是动态语言 变量数类型是可以变化的
+        var x=10;//数字型x
+        var x='pink';//x变成了字符串型
+
+        //number
+        var number=10;
+        var PI=3.14;//都是数字型
+        //1.八进制 0~7 程序里数字前面加0就是八进制
+        var num1=010;
+        console.log(num1); //010八进制 转换为10进制就是8
+        var num2=012;
+        console.log(num2);
+        //2.十六进制 0~9 a~f #ffffff 0x就是十六进制
+        var num3=0x9;
+        console.log(num3);
+        var num4=0xa;
+        console.log(num4);
+        //3.数字型的最大值
+        console.log(Number.MAX_VALUE);
+        //4.数字型最小值
+        console.log(Number.MIN_VALUE);
+        //5.无穷大
+        console.log(Number.MAX_VALUE*2);//Infinity无穷大
+        //6.无穷小
+        console.log(Number.MIN_VALUE*2);//-Infinity无穷小
+        //7.非数字
+        console.log('dad'-100);//NaN非数字
+
+        //isNaN()用来判断非数字 并且返回时false 否则true
+        console.log(isNaN(12));//false
+        console.log(isNaN('pink'));//true
+
+        //string
+        // 'pink' 'pink老师' '12' 'true'
+        var str='程"序"\n员';//外双内丹 外单内双 字符串转义字符 都是\开头 都放到引号里面
+        console.log(str);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
