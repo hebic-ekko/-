@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width: 200px;
+            height: 200px;
+            background-color: #ccc;
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+    <script>
+        //1.获取元素
+        var div=document.querySelector('div');
+        div.onclick=function(){
+            this.style.backgroundColor='purple';//样式驼峰命名
+            this.style.width='250px';//行内样式优先级高与内嵌样式
+        }
+    </script>
+</body>
+</html>
