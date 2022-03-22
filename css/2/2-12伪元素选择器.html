@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>伪元素选择器</title>
+    <style>
+        .demo 类选择器
+        :first-child 伪类选择器
+        ::first-letter 伪元素选择器
+        p::first-letter{
+            /* 选择第一个字更改状态 */
+            color: red;
+            font-size: 50px;
+        }
+        p::first-line{
+            /* 选择第一行字更改状态 */
+            color: green;   
+        }
+        p::selection{
+            /* 选中文字时变换样式 */
+            color: pink;
+        }
+        div::before{
+            /* before在盒子div内部前面插入内容 */
+            content: "俺";
+        }
+        div::after{
+            /* after在盒子div内部后面插入内容 */
+            content: "几月";
+        }
+    </style>
+</head>
+<body>
+    <div>几年</div>
+    <h1>freestyle</h1>
+    <p>伪元素选择器伪元素选择器伪元素选择器伪元素选择器伪元素选择器
+        伪元素选择器伪元素选择器伪元素选择器伪元素选择器伪元素选择器
+        伪元素选择器伪元素选择器伪元素选择器
+    </p>
+</body>
+</html>

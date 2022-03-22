@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div:first-child{
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+            box-sizing: content-box;
+            /* 以前的盒模型 w3c */
+            padding: 10px;
+            border: 15px solid red;
+            /* 盒子大小为 width+height+padding
+                content-box是默认值，让元素维持在w3c的标准box
+            */
+        }
+        div:last-child{
+            width: 200px;
+            height: 200px;
+            background-color: purple;
+            padding: 10px;
+            box-sizing:border-box ;
+            /* padding 和border不撑开盒子 */
+            border: 15px solid red;
+            /* 盒子大小为width 就是说 padding 和border是包含在width里面的 */    
+        }
+        
+    </style>
+</head>
+<body>
+    <div>content-box</div>
+    <div>border-box</div>
+</body>
+</html>

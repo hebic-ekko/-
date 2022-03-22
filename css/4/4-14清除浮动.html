@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .box1{
+            /* height: 200px; */
+            /* 多种情况父级盒子不给高度，因为孩子会变 */
+            width: 600px;
+            background-color: pink;
+            overflow: hidden;
+            /* bfc 清除浮动解决方案 
+                auto
+                scroll同样触发效果
+                溢出隐藏
+            */
+        }
+        .box2{
+            width: 600px;
+            height: 240px;
+            background-color: purple;
+        }
+        .son1{
+            /* son1 son2标准里会撑开盒子 */
+            width: 150px;
+            height: 100px;
+            background-color: skyblue;
+            float: left;
+        }
+        .son2{
+            width: 300px;
+            height: 100px;
+            background-color: hotpink;
+            float: left;
+        }
+        /* son1 son2 都浮动了， 浮动元素不占用位置
+            父亲又没有高度，此时底下
+            盒子就会跑上来
+        */
+        /* .clear{
+            clear: both;
+        } */
+        /* p::after{
+            content: 456;
+        } */
+        .clearfix:after{
+            /* 转化为块级元素 */
+            content: ".";
+            /* 内容为点，尽量不要空，否则
+            旧版本浏览器会有空隙 */
+            display: block;
+            /* 转换为块元素 */
+            height: 0;
+            visibility: hidden;
+            /* 隐藏盒子 */
+            clear: both;
+            /* 清除浮动 */
+        }
+        .clearfix{
+            *zoom: 1;
+            /* *代表ie6 7才能使用特殊符号
+                带有这个*号的属性只有1e67才执行
+                zoom数IE67清除浮动的方法
+                */
+        }
+    </style>
+</head>
+<body>
+    <p>123</p>
+    <div class="box1 clearfix">
+        <div class="son1"></div>
+        <div class="son2"></div> 
+        <!-- 在浮动盒子后面添加一个后盒子
+         -->
+         <!-- <div class="clear"></div> -->
+    </div>
+    <div class="box2"></div>
+</body>
+</html>

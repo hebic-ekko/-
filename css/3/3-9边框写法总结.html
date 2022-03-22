@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>边框用法总结</title>
+    <style>
+        input{
+            border: 0;
+            /*  没有边框*/
+        }
+        .user{
+            border-width: 1px;
+            border-color: pink;
+            border-style: solid;
+        }
+        .nicheng{
+            border-top-width: 1px;
+            /* 上边框高度 */
+            border-top-color: hotpink;
+            border-top-style: solid;
+            border-bottom-width: 1px;
+            border-bottom-color: hotpink;
+            border-bottom-style: solid;
+        }
+        .email{
+            border-top: 1px solid red;
+            /* 上边框 宽度 样式 颜色 一起写 */
+            border-bottom: 1px solid red;
+        }
+        .tel{
+            border:1px solid blue;
+            /* 综合性写法 */
+        }
+    </style>
+</head>
+<body>
+    用户名：<input type="text" class="user"/><br><br>
+    昵  称：<input type="text" class="nicheng"/><br><br>
+    邮  箱：<input type="text" class="email"/><br><br>
+    手  机：<input type="text" class="tel"/>
+</body>
+</html>

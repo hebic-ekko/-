@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>结构伪类选择器</title>
+    <style>
+        li:first-child{
+            font-size: 250px;
+            color: aqua;
+            font-weight: 900;
+        }
+        li:last-child{
+            font-size: 250px;
+            color: brown;
+            font-weight: 900;
+        }
+        li:nth-child(6){
+            font-size: 250px;
+            color: purple;
+            font-weight: 900;
+        }
+        /* odd是所有的奇数元素         even是所有的偶数元素*/
+        li:nth-child(odd){
+            font-size: 250px;
+            color: purple;
+            font-weight: 900;
+        }
+        /* 2n同样也可以表示偶数的元素 */
+        li:nth-child(2n){
+            font-size: 250px;
+            color: purple;
+            font-weight: 900;
+        }
+        /* 从最后倒着数 */
+        li:nth-last-child(even){
+            font-size: 250px;
+            color: purple;
+            font-weight: 900;
+
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li>第一个梁馨媛是猪</li>
+        <li>第二个梁馨媛是狗</li>
+        <li>第三个梁馨媛是驴</li>
+        <li>第四个梁馨媛</li>
+        <li>第五个梁馨媛</li>
+        <li>第六个梁馨媛</li>
+        <li>第七个梁馨媛</li>
+        <li>第八个梁馨媛大牛马</li>
+    </ul>
+</body>
+</html>

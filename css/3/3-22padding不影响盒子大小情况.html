@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>padding不影响盒子大小情况</title>
+    <style>
+        div{
+            height: 30px;
+            border: 1px solid red;
+            padding-left: 20px;
+            /* 如果盒子 没有宽度所以padding就不会影响盒子的宽度*/
+            padding-top: 20px;
+            
+        }
+        nav{
+            width: 300px;
+            height: 40px;
+            border: 1px solid rgb(230, 107, 107);
+        }
+        /* 因为p没有指定宽度则会默认和父亲一样宽 */
+        p{
+            height: 20px;
+            background-color: hotpink;
+            padding-left: 30px;
+            /* 此时padding也不会影响和字的宽度 */
+        }
+    </style>
+</head>
+<body>
+    <div>奔跑吧兄弟</div>
+<nav>
+    <p>nav</p>
+</nav>
+    
+</body>
+</html>

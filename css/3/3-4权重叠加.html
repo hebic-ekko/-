@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>权重叠加</title>
+    <style>
+        li{
+            color: red;
+            /* 0,0,0,1 */
+        }
+        ul li{
+            /* ul 0001 li 0001 ul+li 0002 */
+            color: green;
+        }
+        nav ul li{
+            color: blue;
+            /* 0003 叠加之后效果 最后执行蓝色 */
+        }
+        .daohang ul li{
+            /* .daohang 0010+0001+0001 */
+            color: pink;
+        }
+        /* 数位之间没有进制，不可以越级 000 10 不会变成0010*/
+    </style>
+    
+</head>
+<body>
+    <nav class="daohang">
+        <ul>
+            <li>李白</li>
+            <li>成妖精</li>
+            <li>鲁班一号</li>
+        </ul>
+    </nav>
+</body>
+</html>

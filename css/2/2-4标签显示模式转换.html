@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>标签显示模式转换</title>
+    <style>
+        div{
+            background-color: pink;
+            width: 100px;
+            height: 100px;
+            display: inline;
+            /* 块级标签转换为行内标签 */
+        }
+        span{
+            width: 100px;
+            height: 100px;
+            background-color: hotpink;
+            display: block;
+            /* 行内标签转换为块级标签 */
+        }
+        a{
+            width: 59px;
+            height: 20px;
+            background-color: deeppink;
+            display: inline-block;
+            /* 行内标签转换为内块级标签 */
+        }
+    </style>
+
+</head>
+<body>
+    <div>123</div>
+    <div>123</div>
+    <div>123</div>
+    <span>456</span>
+    <span>456</span>
+    <span>456</span>
+<a href="">123</a><a href="">123</a>
+</body>
+</html>

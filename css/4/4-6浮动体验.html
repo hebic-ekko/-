@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+           /* display: inline-block;
+             转换为行内块元素 有宽度 高度
+             但是元素之间有空隙不方便处理 */
+             float: left;
+             /* 左侧浮动 */
+        }
+        div:nth-child(2){
+            background-color: rgb(44, 28, 28);
+        }
+        div:last-child{
+            background-color: deeppink;
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+    <div></div>
+    <div></div>
+</body>
+</html>

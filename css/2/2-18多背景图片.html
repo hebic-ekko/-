@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>多背景图片</title>
+    <style>
+        div{
+            width: 500px;
+            height: 500px;
+            background: url(img/2.png) no-repeat left top,
+            url(img/3.png) no-repeat right bottom hotpink;
+            /* 一个元素可以设置多重背景图像
+                每组属性间使用逗号分开
+                如果设置的背景图片存在交集，重叠关系，前面的背景图会覆盖在后面背景图之上
+                为避免背景色将图像盖住，背景色通常设置在最后一组
+            */
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+</body>
+</html>

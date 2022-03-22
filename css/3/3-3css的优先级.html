@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3-3css的优先级.html</title>
+    <style>
+        /* 0,0,0,0特殊性公式 */
+        .king{
+            /* 类选择器  0,0,1,0*/
+            color: blue;
+        }
+        div{
+            /* 标签选择器 0,0,0,1*/
+            color: pink;
+        }
+        :first-child{
+            color: green;
+            /* 伪类选择器 0,0,1,0  如果相同就近原则*/
+        }
+        #wang{
+            /* id选择器  0,1,0,0*/
+            color: red;
+        }
+        div{
+            color: orange!important;
+            /* 一旦出现important级别最高优先执行 */
+        }
+
+        /* id 0,1,0,0 行内样式贡献值 1,0,0,0  important 无穷大*/
+    </style>
+</head>
+<body>
+    <div class="king" id="wang" style="color: blueviolet;">
+        <!-- 行内样式贡献值 1,0,0,0 -->
+        王者荣耀
+    </div>
+</body>
+</html>

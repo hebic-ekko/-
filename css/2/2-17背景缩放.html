@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>背景缩放</title>
+    <style>
+        body{
+            background-color: skyblue;
+        }
+        div{
+            width: 400px;
+            height: 500px;
+            background: hotpink url(img/2.png) no-repeat ;
+            /* 我们插入的图片img 直接通过 width 和height 设置就可 */
+            /* 背景图片设置 background-size */
+            /* 我们尽量只改一个值 防止缩放是真扭曲 */
+            /* background-size: 50%; */
+            /* 把背景图片缩放为原来的一半 */
+            /* background-size: cover; */
+            /* 设置为cover时会自动调整缩放比例，保证图片
+                始终填充满背景区域，如有溢出部分则会隐藏
+                图片进行等比例缩放 图片一定要保证宽度和高度同时满足盒子的
+                大小，是必会有部分超出去，
+                我们平时用的cover最多
+            */
+            background-size: contain;
+            /* 自动调整缩放比例，保证图片始终完整显示背景区域 
+                图片进行等比例缩放，如果图片高度或者宽度 有一个和
+                盒子一样大，就不在缩放这样的好处保证了图片的完整，
+                不会有缺失的一部分，但会有部分裸露
+            */
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+</body>
+</html>

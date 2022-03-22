@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>子元素选择器</title>
+    <style>
+        .nav li{
+            /* 后代选择器所有 儿子 孙子 重孙子 */
+            color: red;
+        }
+        .nav>li{
+            /* 子元素选择器  只有儿子 没有别的元素 */
+            color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <ul class="nav">   
+        <li >一级菜单
+            <ul>
+                <li>二级菜单</li>
+                <li>二级菜单</li>
+                <li>二级菜单</li>
+            </ul>
+       </li>
+    </ul>   
+</body>
+</html>

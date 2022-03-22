@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box1{
+            /* height: 200px; */
+            /* 多种情况父级盒子不给高度，因为孩子会变 */
+            width: 600px;
+            background-color: pink;
+            overflow: hidden;
+            /* bfc 清除浮动解决方案 
+                auto
+                scroll同样触发效果
+                溢出隐藏
+            */
+        }
+        .box2{
+            width: 600px;
+            height: 240px;
+            background-color: purple;
+        }
+        .son1{
+            /* son1 son2标准里会撑开盒子 */
+            width: 150px;
+            height: 100px;
+            background-color: skyblue;
+            float: left;
+        }
+        .son2{
+            width: 300px;
+            height: 100px;
+            background-color: hotpink;
+            float: left;
+        }
+        .clearfix:before, .clearfix:after{
+            content: "";
+            display: table;
+            /* 触发bfc防止外边距合并 */
+        }
+        .clearfix:after{
+            clear: both;
+        }
+        .clearfix{
+            *zoom: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="box1 clearfix">
+        <div class="son1"></div>
+        <div class="son2"></div> 
+    </div>
+    <div class="box2"></div>
+</body>
+</html>
