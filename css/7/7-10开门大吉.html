@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        section{
+            width: 450px;
+            height: 300px;
+            border: 1px solid #000;
+            margin: 100px auto;
+            background: url(img/hgds.png) no-repeat;
+            position: relative;
+            perspective: 1000px;
+        }
+        .door-left,.door-right{
+            position: absolute;
+            top: 0;
+            width: 50%;
+            height: 100%;
+            background-color: pink;
+            transition: all 1s;
+        }
+        .door-left{
+            left: 0px;
+            border-right: 1px solid #000;
+            transform-origin: left;
+        }
+        .door-right{
+            right: 0px;
+            border-right: 1px solid #000;
+            transform-origin: right;
+        }
+        .door-left::before,
+        .door-right::before{
+            content: "";
+            position: absolute;
+            
+            top: 50%;
+            width: 20px;
+            height: 20px;
+            border: 1px solid #000;
+            border-radius: 50%;
+            transform: translateY(-50%);
+            /* 走自己搞定一半 */
+            
+        }
+        .door-left::before{
+            right: 5px;;
+        }
+        .door-right::before{
+            left: 5px;
+        }
+        section:hover .door-left{
+            transform-origin: left;
+            transform: rotateY(-130deg);
+        }
+        section:hover .door-right{
+            transform-origin: right;
+            transform: rotateY(130deg);
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <div class="door-left"></div>
+        <div class="door-right"></div>
+    </section>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+            margin: 100px auto;
+            transition: all 0.5s;
+        }
+        div:hover{
+            transform: scale(2);
+            /* x 水平缩放 y 垂直缩放
+                如果只写一个参数 宽高 都缩放 */
+        }
+        section{
+            width: 632px;
+            height: 340px;
+            margin: 0 auto;
+            
+            overflow: hidden;
+            /* 溢出隐藏 */
+        }
+        section img{
+            transition: all 2s;
+        }
+        section:hover img{
+            transform: scale(1.2);
+            /* 谁做动画谁做过度 */
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+    <section><img src="img/hgds.png" height="430" width="632" alt=""></section>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width: 120px;
+            height: 20px;
+            border: 1px solid red;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            /* 超出部分用省略号代替 */
+            overflow: hidden;
+            /*text-overflow: clip; 其次必须有hidden这句话 才能直接裁剪不显示内容 */
+            /* 首先添加这句话 强制显示一行 */
+            /*white-space: nowrap; 强制行内显示 不允许换行 除非br */
+            /* 允许单词拆开显示 break-all*/
+            /* 不允许拆开单词显示 连字符除外-  keep-all*/
+        }
+    </style>
+</head>
+<body>
+    <div>
+        andi is 我的名字安迪克鲁萨特哈萨克 name
+    </div>
+</body>
+</html>

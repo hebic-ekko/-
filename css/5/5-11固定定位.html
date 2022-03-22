@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            height: 3000px;
+        }
+        .father{
+            height: 200px;
+            width: 200px;
+            background-color: pink;
+            margin: 100px auto;
+            position: relative;
+        }
+        img{
+            position: fixed;
+            /* 固定定位 */
+            top: 0;
+            right: 0;
+            /* 固定定位跟父级没有关系只认浏览器  不管父亲是否相对定位
+                完全脱标 不占位置 不会随浏览器滚动而滚动
+            */
+        }
+    </style>
+</head>
+<body>
+    <div class="father">
+        <img src="hgds.png" width="100" alt="">
+    </div>
+</body>
+</html>

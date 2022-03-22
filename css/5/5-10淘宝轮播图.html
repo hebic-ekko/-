@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        ul{
+            list-style: none;
+        }
+        .slider{
+            width: 520px;
+            height: 280px;
+            background-color: pink;
+            margin: 50px auto;
+            position: relative;
+            /* 子绝父相 */
+        }
+        .arrow-l,
+        .arrow-r{
+            position: absolute;
+            width: 24px;
+            height: 32px;
+            display: block;
+            top: 50%;
+            /* 百分比按父级高度来计算 */
+            margin-top: -18px;
+            /* 上负值 高度一半 */
+        }
+        .arrow-l{
+            left: 0;
+           
+        }
+        .arrow-r{
+            right:0 ;
+            
+        }
+        .circle{
+            width: 65px;
+            height: 13px;
+            background-color: rgba(255, 255, 255, .2);
+            /* 半透明 */
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            margin-left: -32px;
+            bottom: 15px;
+            /* 因为底对齐正直 */
+            border-radius: 50%;
+
+
+        }
+        .circle li{
+            width: 9px;
+            height: 9px;
+            background-color: #b7b7b7;
+            float: left;
+            margin: 2px;
+            border-radius: 50%;
+            /* 圆角 */
+        }
+        .circle .current {
+            /* 权重 优先级 0020 */
+            background-color: #f40;
+        }
+    </style>
+</head>
+<body>
+    <div class="slider">
+        
+        <img src="taobao.jpg" alt="">
+        <a href="#" class="arrow-l"><img src="zjt.png" alt=""></a>
+        <a href="#" class="arrow-r"><img src="yjt.png" alt=""></a>
+        <ul class="circle">
+            <!-- 圆点 -->
+            <li class="current">
+                <!-- current当前的意思 -->
+            </li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+</body>
+</html>

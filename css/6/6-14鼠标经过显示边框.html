@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width: 296px;
+            height: 180px;
+            margin: 20px auto;
+            position: relative;
+        }
+        div:hover::before{
+            /* 鼠标经过之后插入一个伪元素 */
+            content: '';
+            width: 100%;
+            height: 100%;
+            border: 10px solid rgb(209, 47, 61)(206, 61, 61);
+            display: block;
+            /* 伪元素属于行内元素 要转换 */
+            position: absolute;
+            top: 0;
+            left: 0;
+            /* 要伪元素不占位 就用绝对定位 */
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <img src="img/ao.png" height="180" width="296" alt="">
+    </div>
+    <div>
+        <img src="img/ao.png" height="180" width="296" alt="">
+    </div>
+    <div>
+        <img src="img/ao.png" height="180" width="296" alt="">
+    </div>
+</body>
+</html>

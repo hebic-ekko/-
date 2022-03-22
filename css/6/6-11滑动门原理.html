@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        a{
+            margin: 100px;
+            display: inline-block;
+            /* 不能给宽度 写死就不是自由缩放推拉门效果了 */  
+            height: 33px;
+            background: url(img/fdj.png) no-repeat;
+            padding-left: 15px;
+            color: #fff;
+        }
+        a.span{
+            display: inline-block;
+            height: 33px;
+            background: url(img/fdj.png) no-repeat;
+            /* span不能给宽度 利用padding挤开 要span右边的圆角 背景位置右对齐 */
+            padding-right: 15px;
+        }
+    </style>
+</head>
+<body>
+    <a href="#"><span></span></a>
+</body>
+</html>

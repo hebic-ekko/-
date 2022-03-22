@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .demo{
+            border: 1px solid #000;
+            width: 300px;
+            margin: 50px auto;
+            padding: 10px;
+        }
+        .demo::first-letter{
+            font-size: 40px;
+            font-weight: bold;
+            float: left;
+        }
+        .demo::first-line{
+            /* 第一行 */
+            color: #f66;
+
+        }
+        .demo1{
+            width: 300px;
+            border: 1px solid #000;
+            margin: 10px auto;
+            padding: 10px;
+            text-align: center;
+
+        }
+        .demo1::before{
+            content: url();
+            display: block;
+        }
+        .demo1::after{
+            content: url();
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="demo1">
+        <div class="top"><img src="" alt=""></div>
+    </div>
+    <div class="demo">dawdawda</div>
+</body>
+</html>
